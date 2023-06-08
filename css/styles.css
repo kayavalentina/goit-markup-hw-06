@@ -456,6 +456,68 @@ img {
     max-height: 112px;
     margin-right: 120px;
 }
+/*Footer interactiv*/
+.footer-subscribe{
+    margin-left: 80px;
+}
+.email-footer{
+    display: flex;
+    gap: 24px;
+}
+.footer-subscribe-input{
+    width: 264px;
+    height: 40px;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    padding-left: 16px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.02em; 
+    transition: border-color var(--transition-duration-and-func);
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+    resize: none; 
+}
+.footer-subscribe-input:focus{
+    border-color: var(--text-color);
+    outline: none;
+}
+.footer-subscribe-input::placeholder{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: var(--text-color);
+}
+.button-footer{
+    display: flex;
+    gap: 16px;
+    background-color: var(--btn-color);
+    width: 165px;
+    height: 40px;
+    padding: 8px 24px;
+    border-radius: 4px;
+    border-color: transparent;
+    transition: background-color var(--transition-duration-and-func);
+    cursor: pointer;
+}
+
+.button-subscribe{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--text-color);
+}
+.button-footer:hover,
+.button-footer:focus{
+    background-color: var(--title-color);
+}
 /*Portfolio*/
 .portfolio {
     padding: 96px 0 120px;
@@ -629,7 +691,6 @@ img {
 }
 .modal-form-input-desc{
     display: block;
-    font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17; 
@@ -641,8 +702,29 @@ img {
     margin-bottom: 8px;
 }
 .modal-form-comment{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--services-color); 
+    resize: none;
+    width: 100%;
+    height: 120px;
+    padding: 8px 16px;
     border: 1px solid var(--navy-blue-modal);
-    border-radius: 4px; 
+    border-radius: 4px;
+    transition: border-color var(--transition-duration-and-func); 
+}
+.modal-form-comment:focus{
+    outline: none;
+    border-color: var(--btn-color);
+}
+.modal-form-comment::placeholder{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--navy-blue-modal);
 }
 .modal-form-input{
     width: 100%;
@@ -655,6 +737,14 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--services-color); 
+    transition: border-color var(--transition-duration-and-func);
+}
+.modal-form-input:focus{
+    outline: none;
+    border-color: var(--btn-color);
+}
+.modal-form-input:focus + .input-icon{
+    fill: var(--btn-color);
 }
 .modal-form-input-wrapper{
     position: relative;
@@ -665,4 +755,62 @@ img {
     top: 50%;
     left: 16px;
     transform: translate(0,-50%);
+    transition: fill var(--transition-duration-and-func);
+}
+/*Modal checkbox*/
+.check-box{
+    margin-bottom: 24px;
+    margin-top: 8px;
+}
+.modal-form-check-desc{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--light-slate-color);
+}
+.modal-form-check-link{
+    color: var(--btn-color);
+}
+.modal-form-check-desc{
+    display: flex;
+}
+.check-policy{
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--navy-blue-modal);
+    border-radius: 2px;
+    transition: background-color var(--transition-duration-and-func);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    cursor: pointer;
+    margin-right: 8px;
+}
+.modal-form-check:checked + .modal-form-check-desc > .check-policy{
+    background-color: var(--title-color);
+    fill: var(--text-color);
+    border: none;
+}
+/*Modal submit*/
+.modal-form-submit{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    width: 169px;
+    height: 56px;
+    background-color: var(--btn-color);
+    padding: 16px 32px;
+    cursor: pointer;
+    transition: background-color var(--transition-duration-and-func);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    color: var(--text-color);
+}
+.modal-form-submit:hover,
+.modal-form-submit:focus{
+    background-color: var(--title-color);
 }
