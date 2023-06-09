@@ -471,48 +471,44 @@ img {
     border-radius: 4px;
     padding-left: 16px;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 1.5;
-    letter-spacing: 0.02em; 
+    letter-spacing: 0.04em; 
     transition: border-color var(--transition-duration-and-func);
     background-color: transparent;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
     color: var(--text-color);
     resize: none; 
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 .footer-subscribe-input:focus{
     border-color: var(--text-color);
     outline: none;
 }
 .footer-subscribe-input::placeholder{
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 2;
-    letter-spacing: 0.04em;
     color: var(--text-color);
 }
 .button-footer{
     display: flex;
-    gap: 16px;
-    background-color: var(--btn-color);
-    width: 165px;
-    height: 40px;
-    padding: 8px 24px;
-    border-radius: 4px;
-    border-color: transparent;
-    transition: background-color var(--transition-duration-and-func);
-    cursor: pointer;
-}
-
-.button-subscribe{
+    justify-content: center;
+    align-items: center; 
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: var(--text-color);
+    background-color: var(--btn-color);
+    min-width: 165px;
+    height: 40px;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color var(--transition-duration-and-func);
+    cursor: pointer;
+}
+.button-ftr{
+    margin-left: 16px;
 }
 .button-footer:hover,
 .button-footer:focus{
@@ -701,19 +697,24 @@ img {
 .modal-form-field{
     margin-bottom: 8px;
 }
+.modal-check-field{
+    margin-bottom: 16px;
+}
 .modal-form-comment{
     font-weight: 400;
-    font-size: 18px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--services-color); 
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--navy-blue-modal); 
     resize: none;
     width: 100%;
     height: 120px;
     padding: 8px 16px;
-    border: 1px solid var(--navy-blue-modal);
+    border: 1px solid rgba(46, 47, 66, 0.2);
     border-radius: 4px;
-    transition: border-color var(--transition-duration-and-func); 
+    background-color: transparent;
+    transition: border-color var(--transition-duration-and-func);
+    outline: transparent; 
 }
 .modal-form-comment:focus{
     outline: none;
@@ -738,6 +739,8 @@ img {
     letter-spacing: 0.02em;
     color: var(--services-color); 
     transition: border-color var(--transition-duration-and-func);
+    background-color: transparent;
+    outline: transparent;
 }
 .modal-form-input:focus{
     outline: none;
@@ -775,12 +778,12 @@ img {
 .modal-form-check-desc{
     display: flex;
 }
-.check-policy{
+.check-privacy{
     width: 16px;
     height: 16px;
     border: 1px solid var(--navy-blue-modal);
     border-radius: 2px;
-    transition: background-color var(--transition-duration-and-func);
+    transition: background-color var(--transition-duration-and-func), border var(--transition-duration-and-func), fill var(--transition-duration-and-func) ;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -788,19 +791,26 @@ img {
     cursor: pointer;
     margin-right: 8px;
 }
-.modal-form-check:checked + .modal-form-check-desc > .check-policy{
+.modal-form-check:checked + .modal-form-check-desc > .check-privacy{
     background-color: var(--title-color);
     fill: var(--text-color);
     border: none;
 }
 /*Modal submit*/
 .modal-form-submit{
-    display: flex;
+    display: block;
     align-self: center;
     justify-content: center;
     align-items: center;
-    width: 169px;
+    min-width: 169px;
     height: 56px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--text-color);
+    cursor: pointer;
+    font-weight: 500;
     background-color: var(--btn-color);
     padding: 16px 32px;
     cursor: pointer;
